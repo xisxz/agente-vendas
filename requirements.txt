@@ -1,0 +1,10 @@
+Flask==3.1.1
+flask-cors==6.0.0
+Flask-SQLAlchemy==3.1.1
+requests==2.32.4
+spacy==3.8.7
+nltk==3.9.1
+textblob==0.19.0
+transformers==4.53.0
+torch==2.7.1
+

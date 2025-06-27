@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: sales-agent-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python -m spacy download pt_core_news_sm
+    startCommand: python src/main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: FLASK_ENV
+        value: production
+      - key: PIPEDRIVE_API_TOKEN
+        sync: false
+      - key: PIPEDRIVE_COMPANY_DOMAIN
+        sync: false
+    autoDeploy: false
+
